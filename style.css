@@ -1,0 +1,420 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+.container {
+  background-color: #111;
+  overflow: hidden;
+}
+
+.intro {
+  background: url("./img/spacebg.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.salute {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.saluteTextContainer {
+  text-align: center;
+  flex: 3;
+}
+
+.saluteImgContainer {
+  flex: 1;
+}
+
+.saluteText {
+  color: #333;
+  font-size: 30vw;
+  cursor: default;
+}
+
+.saluteTextSecond {
+  color: #333;
+  font-size: 10vw;
+  cursor: default;
+}
+
+.saluteImg {
+  width: 100%;
+  overflow: hidden;
+  max-height: 100vh;
+}
+
+.nameContainer {
+  height: 100vh;
+  background-color: whitesmoke;
+  position: relative;
+  overflow: hidden;
+}
+
+.sunContainer {
+  position: absolute;
+  top: 20px;
+  left: 0;
+}
+
+.sunImg {
+  width: 300px;
+  height: 120px;
+}
+
+.cloudContainer1 {
+  position: absolute;
+  top: 60px;
+  right: 200px;
+}
+
+.cloudContainer2 {
+  position: absolute;
+  top: 20px;
+  right: 0;
+}
+
+.cloudImg1 {
+  width: 300px;
+  height: 220px;
+}
+
+.cloudImg2 {
+  width: 200px;
+  height: 150px;
+}
+
+.name {
+  font-size: 16vw;
+  text-align: center;
+  cursor: default;
+  line-height: 100vh;
+}
+
+.jobTitleContainer {
+  height: 100vh;
+}
+
+.dark {
+  background: url("./img/bg1.png");
+}
+
+.purple {
+  background: rebeccapurple url("./img/bg2.png");
+}
+
+.jobTitle {
+  font-size: 10vw;
+  color: #333;
+  line-height: 100vh;
+  cursor: default;
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 30vh;
+  padding: 0px 100px;
+}
+
+.projectsTitle {
+  font-size: 10vw;
+  color: #333;
+}
+
+.project {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.project:nth-child(2n) {
+  flex-direction: row-reverse;
+}
+
+.phone {
+  flex: 1;
+  width: 300px;
+  height: 600px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.phoneScreen {
+  width: 267px;
+  height: 567px;
+  position: absolute;
+  top: 17px;
+  border-radius: 28px;
+  overflow-y: auto;
+}
+
+.phoneScreen::-webkit-scrollbar {
+  display: none;
+}
+
+.phoneApp {
+  width: 100%;
+}
+
+.projectDetail {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
+}
+
+.projectTitle {
+  font-size: 7vw;
+  color: #333;
+}
+
+.projectDesc {
+  font-size: 20px;
+  color: #333;
+  line-height: 40px;
+}
+
+.buttonContainer {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.projectButton {
+  padding: 10px 20px;
+  background-color: transparent;
+  border: 2px solid #555;
+  color: #555;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.projectButtonApk {
+  padding: 10px 20px;
+  background-color: transparent;
+  border: 2px solid #555;
+  color: #555;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.projectButtonApk::after {
+  content: "Apk Link";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  background-color: #555;
+  color: #222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 1s all;
+}
+
+.projectButtonApk:hover::after {
+  left: 0px;
+}
+
+.projectButtonWebsite {
+  padding: 10px 20px;
+  background-color: transparent;
+  border: 2px solid #555;
+  color: #555;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.projectButtonWebsite::after {
+  content: "Website Link";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  background-color: #555;
+  color: #222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 1s all;
+}
+.projectButtonWebsite:hover::after {
+  left: 0px;
+}
+
+.projectButton::after {
+  content: "Github Link";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  background-color: #555;
+  color: #222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 1s all;
+}
+
+.projectButton:hover::after {
+  left: 0px;
+}
+
+.laptop {
+  flex: 1;
+  width: 600px;
+  height: 379px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.laptopScreen {
+  width: 451px;
+  height: 283px;
+  position: absolute;
+  top: 18px;
+  overflow-y: auto;
+}
+
+.laptopScreen::-webkit-scrollbar {
+  display: none;
+}
+
+.githubContainer {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.githubCharts {
+  width: 820px;
+  text-align: center;
+}
+
+.boxContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.githubTitle {
+  font-size: 3vw;
+  color: #333;
+}
+.dates {
+  padding: 10px;
+  color: #555;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.box {
+  width: 15px;
+  height: 15px;
+  background-color: #171c25;
+  border-radius: 2px;
+  transition: 3s all ease;
+}
+
+.active:nth-child(4n) {
+  background-color: #195b2c;
+}
+
+/* active odd numbers */
+.githubCharts:hover .active:nth-child(2n + 1) {
+  background-color: #195b2c;
+}
+
+/* active even numbers */
+.githubCharts:hover .active:nth-child(2n) {
+  background-color: #063f24;
+}
+
+@media screen and (max-width: 1024px) {
+  .project {
+    flex-direction: column;
+  }
+
+  .projects {
+    padding: 0%;
+  }
+  .project:nth-child(2n) {
+    flex-direction: column;
+  }
+
+  .phone,
+  .laptop {
+    transform: none !important;
+  }
+  .githubCharts {
+    display: none;
+  }
+
+  .laptopScreen {
+    top: 60px;
+  }
+
+  .intro {
+    background-size: cover;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .projectTitle {
+    line-height: 40px;
+  }
+
+  .projectDesc {
+    font-size: 14px;
+    text-align: justify;
+    padding: 0px 6px;
+    line-height: 30px;
+  }
+
+  .projectDetail {
+    gap: 10px;
+  }
+
+  .project {
+    height: 130vh;
+  }
+
+  .projects {
+    gap: 10vh;
+  }
+
+  .laptopScreen {
+    top: 100px;
+  }
+}
