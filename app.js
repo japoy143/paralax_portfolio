@@ -5,11 +5,18 @@ document.addEventListener("DOMContentLoaded", () => {
   const authorName = document.querySelector(".name");
   const sunContainer = document.querySelector(".sunContainer");
   const sunImg = document.querySelector(".sunImg");
+
+  const moonContainer = document.querySelector(".moonContainer");
+  const moonImg = document.querySelector(".moonImg");
+  const mountContainer1 = document.querySelector(".mountainContainer1");
+  const mountContainer2 = document.querySelector(".mountainContainer2");
+
   const jobTitleContainers = document.querySelectorAll(".jobTitleContainer");
   const jobTitles = document.querySelectorAll(".jobTitle");
   const projectTitle = document.querySelector(".projectsTitle");
   const phone = document.querySelectorAll(".phone");
   const laptop = document.querySelectorAll(".laptop");
+  const contactContainer = document.querySelector(".contactContainer");
 
   for (let i = 0; i < 365; i++) {
     const el = document.createElement("div");
@@ -37,8 +44,10 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("scroll", () => {
     console.log(window.scrollY);
     let offsetY = window.scrollY;
+    let maxOffsetY = document.documentElement.scrollHeight - window.innerHeight;
 
-    let baseWidth = 100; // starting width in pixels
+    let baseWidth = 100;
+    let baseMoonWidth = 1300;
 
     // Scale the sun image based on scroll position, using a base width
     sunImg.style.height = `${baseWidth + offsetY * 0.4}px`;
@@ -49,15 +58,29 @@ document.addEventListener("DOMContentLoaded", () => {
     }px) `;
     sunContainer.style.transform = `translateY(${offsetY * 0.5}px)`;
 
+    moonContainer.style.transform = `translateX(${-offsetY * 0.1}px)`;
+    moonImg.style.height = `${baseMoonWidth - offsetY * 0.5}px`;
+    moonImg.style.width = `${baseMoonWidth - offsetY * 0.5}px`;
+    mountContainer1.style.transform = `translateX(${-offsetY * 0.1}px)`;
+    mountContainer2.style.transform = `translateX(${offsetY * 0.1}px)`;
+
     authorName.style.transform = `translateX(${offsetY * 0.1}px)`;
     jobTitleContainers[0].style.backgroundPositionY = `${offsetY * 0.5}px`;
-    jobTitleContainers[1].style.backgroundPositionY = `${-offsetY * 0.5}px`;
+    // jobTitleContainers[1].style.backgroundPositionY = `${-offsetY * 0.5}px`;
     jobTitles[0].style.transform = `translateX(calc(200vh - ${offsetY}px))`;
-    jobTitles[1].style.transform = `translateX(calc(-300vh + ${offsetY}px))`;
-    projectTitle.style.transform = `translateX(calc(400vh - ${offsetY}px))`;
-    phone[0].style.transform = `translateX(calc(-480vh + ${offsetY}px))`;
-    phone[1].style.transform = `translateX(calc(-880vh + ${offsetY}px))`;
-    laptop[0].style.transform = `translateX(calc(-620vh + ${offsetY}px))`;
-    laptop[1].style.transform = `translateX(calc(750vh - ${offsetY}px))`;
+    // jobTitles[1].style.transform = `translateX(calc(-300vh + ${offsetY}px))`;
+    projectTitle.style.transform = `translateX(calc(-300vh + ${offsetY}px))`;
+    phone[0].style.transform = `translateX(calc(-380vh + ${offsetY}px))`;
+    phone[1].style.transform = `translateX(calc(-780vh + ${offsetY}px))`;
+    laptop[0].style.transform = `translateX(calc(-520vh + ${offsetY}px))`;
+    laptop[1].style.transform = `translateX(calc(650vh - ${offsetY}px))`;
+
+    let lastview = maxOffsetY - 500;
+
+    if (offsetY >= lastview) {
+      contactContainer.style.display = "none";
+    } else {
+      contactContainer.style.display = "flex";
+    }
   });
 });

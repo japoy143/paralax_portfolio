@@ -8,6 +8,45 @@
   background-color: #111;
   overflow: hidden;
 }
+.contactContainer {
+  height: 60px;
+  width: 60px;
+  background-color: #8888;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  border-radius: 100%;
+  z-index: 50;
+}
+
+.contactContainer img {
+  height: 40px;
+  width: 40px;
+}
+
+.contactContainer a {
+  display: none;
+}
+
+.contactContainer a:first-child {
+  display: flex;
+}
+
+.contactContainer:hover {
+  width: 170px;
+  height: 50px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-evenly;
+  transition: 0.5s all ease;
+}
+
+.contactContainer:hover a {
+  display: flex;
+}
 
 .intro {
   background: url("./img/spacebg.svg");
@@ -54,12 +93,14 @@
   background-color: whitesmoke;
   position: relative;
   overflow: hidden;
+  z-index: 0;
 }
 
 .sunContainer {
   position: absolute;
   top: 20px;
   left: 0;
+  z-index: -1;
 }
 
 .sunImg {
@@ -98,10 +139,49 @@
 
 .jobTitleContainer {
   height: 100vh;
+  overflow: hidden;
 }
 
 .dark {
-  background: url("./img/bg1.png");
+  background-color: #171c25;
+  position: relative;
+  z-index: 10;
+}
+
+.mountainContainer1 {
+  position: absolute;
+  z-index: -1;
+  top: 200px;
+  left: 0;
+}
+
+.mountainContainer2 {
+  position: absolute;
+  z-index: -1;
+  top: 200px;
+  right: 0;
+}
+
+.mountainImg1 {
+  height: 1000px;
+  width: 1000px;
+}
+
+.mountainImg2 {
+  height: 800px;
+  width: 800px;
+  transform: scaleX(-1);
+}
+
+.moonContainer {
+  position: absolute;
+  top: 0;
+  left: 300px;
+  z-index: -2;
+}
+.moonImg {
+  height: 500px;
+  width: 500px;
 }
 
 .purple {
@@ -110,7 +190,7 @@
 
 .jobTitle {
   font-size: 10vw;
-  color: #333;
+  color: #555;
   line-height: 100vh;
   cursor: default;
 }
@@ -313,7 +393,20 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
+}
+.githubLinks {
+  width: 250px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 4px;
+}
+
+.githubLinks img {
+  height: 60px;
+  width: 60px;
 }
 
 .githubCharts {
@@ -328,7 +421,7 @@
 }
 
 .githubTitle {
-  font-size: 3vw;
+  font-size: 100px;
   color: #333;
 }
 .dates {
@@ -388,6 +481,42 @@
   .intro {
     background-size: cover;
   }
+
+  .moonImg {
+    height: 300px !important;
+    width: 300px !important;
+  }
+  .mountainImg1 {
+    height: 600px;
+    width: 600px;
+  }
+  .mountainImg2 {
+    height: 600px;
+    width: 600px;
+  }
+
+  .cloudImg1 {
+    width: 200px;
+    height: 120px;
+  }
+
+  .cloudImg2 {
+    width: 250px;
+    height: 150px;
+  }
+  .project {
+    height: 160vh;
+  }
+  .phoneScreen {
+    top: 86px;
+  }
+  .laptopScreen {
+    top: 200px;
+  }
+  .githubTitle {
+    font-size: 50px;
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 400px) {
@@ -416,5 +545,12 @@
 
   .laptopScreen {
     top: 100px;
+  }
+  .phoneScreen {
+    top: 18px;
+  }
+  .name {
+    font-size: 14vw;
+    text-align: start;
   }
 }
