@@ -48,6 +48,10 @@
   display: flex;
 }
 
+.contactContainer:hover #mail {
+  display: none;
+}
+
 .intro {
   background: url("./img/spacebg.svg");
   background-size: contain;
@@ -168,8 +172,8 @@
 }
 
 .mountainImg2 {
-  height: 800px;
-  width: 800px;
+  height: 1000px;
+  width: 1000px;
   transform: scaleX(-1);
 }
 
@@ -552,5 +556,26 @@
   .name {
     font-size: 14vw;
     text-align: start;
+  }
+
+  .mountainImg1 {
+    height: 400px;
+    width: 400px;
+  }
+  .mountainImg2 {
+    height: 400px;
+    width: 400px;
+  }
+  .mountainContainer1 {
+    top: 400px;
+    left: 0;
+  }
+
+  .mountainContainer2 {
+    top: 400px;
+  }
+  .moonImg {
+    height: 200px !important;
+    width: 200px !important;
   }
 }
